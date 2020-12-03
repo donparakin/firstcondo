@@ -39,7 +39,9 @@ class TheView extends V_Layouts_LeftNav1 {
 		</tr>
 		<tr>
 			<td colspan="2">
-			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfx6LbtIBIPoqWW0__nii33wwqK88SWijTOJn9bHt25OxOpbg/viewform?embedded=true" width="640" height="805" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+			<iframe 
+				src="https://docs.google.com/forms/d/e/1FAIpQLSfx6LbtIBIPoqWW0__nii33wwqK88SWijTOJn9bHt25OxOpbg/viewform?embedded=true"
+				width="640" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 			</td>
 		</tr>
 	</table>
