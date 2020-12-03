@@ -1,0 +1,31 @@
+
+#=============== httpd Config
+	Options +FollowSymlinks
+	RewriteEngine on
+	RewriteRule ^/?(index.php|sysadm.php) - [QSA,L]
+	RewriteRule ^/?sc/r\d+ - [NC,L]
+	RewriteRule ^/?(.*) /index.php?urlpath=$1 [NC,QSA,L]
+
+#=============== PHP Config
+# if FCGI, must be in a php.ini
+# if WebFaction, must be in php.ini in docroot
+# if Apache PHP module (dev), ... (the following)
+<IfModule php5_module>
+	#--- (must have)
+	php_flag short_open_tag on
+	php_flag magic_quotes_gpc off
+	php_value session.name GTHOG_SESSION
+	php_value default_charset UTF-8
+	php_value mbstring.internal_encoding UTF-8
+	php_value mbstring.http_output UTF-8
+	#--- (nice to have)
+	php_flag expose_php off
+	php_flag always_populate_raw_post_data off
+	php_flag register_argc_argv off
+	php_flag register_long_arrays off
+	#--- for DEV
+	#php_flag display_errors on
+	#--- ???
+	#php_value session.save_path "/tmp"
+	#php_value session.cookie_secure on
+</IfModule>
