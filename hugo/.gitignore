@@ -1,0 +1,19 @@
+
+#---- Hugo
+assets/built/
+public/
+resources/
+themes/*
+!themes/fcg-2024
+themes/fcg-2024/assets/built/
+.hugo_build.lock
+
+#---- Dependency Directories
+node_modules/
+.venv/
+venv/
+
+#---- Config files
+.env
+.env.local
+.env.*.local

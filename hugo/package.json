@@ -1,0 +1,45 @@
+{
+  "name": "www.firstcondo.ca",
+  "version": "1.2.0",
+  "description": "FirstCondo.ca Public Website",
+  "main": "site.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hugo:build": "hugo --cleanDestinationDir",
+    "hugo:serve": "hugo server --panicOnWarning",
+    "hugo:serve+debug": "hugo server --verbose --disableFastRender",
+    "hugo:serve+drafts": "hugo server --buildDrafts",
+    "hugo:config": "hugo config",
+    "hugo:version": "hugo version",
+    "sass:build": "node themes/ggc-2024/assets-src/css/build.cjs",
+    "sass:watch": "node themes/ggc-2024/assets-src/css/build.cjs --watch",
+    "site:build": "npm run sass:build && npm run hugo:build"
+  },
+  "author": "Don Parakin",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "hugo-extended": "*",
+    "htmx.org": "2.x",
+    "alpinejs": "3.x",
+    "@picocss/pico": "2.x",
+    "sass": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/weaddvalue/gogocondo-www.git"
+  },
+  "jshintConfig": {
+    "undef": true,
+    "unused": true,
+    "esversion": 11,
+    "browser": true,
+    "devel": true,
+    "worker": true,
+    "globals": {},
+    "eqeqeq": true,
+    "forin": true,
+    "trailingcomma": true,
+    "varstmt": true
+  }
+}

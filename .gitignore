@@ -1,0 +1,18 @@
+
+#---- Developer
+x-dev/sandbox/*
+
+#---- Dependency Directories
+node_modules/
+.venv/
+venv/
+
+#---- Config files
+.env
+.env.local
+.env.*.local
+
+#---- IDE Directories
+.vscode/
+.idea/
+/*.iml
