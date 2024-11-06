@@ -1,0 +1,32 @@
+#-----------------------------------------------------------------------
+# Site:  FirstCondo.ca
+#-----------------------------------------------------------------------
+baseURL = "https://www.firstcondo.ca/"
+title = "FirstCondo"
+
+theme = "fcg-2024"
+
+#---- See config/_default/module.toml for more settings
+#contentDir = "content"
+
+enableRobotsTXT = false
+#defaultContentLanguage = "en"
+#defaultContentLanguageInSubdir = true
+#enableMissingTranslationPlaceholders = false
+
+[taxonomies]
+tag = ""
+category = ""
+
+[markup.tableOfContents]
+  startLevel = 1
+  endLevel = 4
+  ordered = false
+[markup.highlight]
+  lineNos = true
+  lineNumbersInTable = false
+  style = 'witchhazel'
+[markup.goldmark.parser.attribute]
+  block = true
+[markup.goldmark.renderer]
+  unsafe = true
