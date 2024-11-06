@@ -1,0 +1,36 @@
+{{/*
+Shortcode: pglink
+- Creates link to another Hugo page (<a ...>page title</a>)
+- USAGE:  In Hugo content files (./content/../index.en.md):
+  {{< pglink "path/to/my-page" >}}
+  {{< pglink "path/to/my-page" "alt-link-text" >}}
+  {{< pglink path="path/to/my-page" hash="#my-hdr" >}}
+  - Params: positional or named (but not mixed)
+    - path: the page's path (relative to ./content)
+    - text: inside the link; defaults to the page's title.
+    - hash: an anchore within the page (WITH the "#")
+*/}}
+
+{{- $path := .Get 0 | default (.Get "path") | default "" }}
+{{- $text := .Get 1 | default (.Get "text") }}
+{{- $hash := .Get 2 | default (.Get "hash") | default "" }}
+
+{{- $emsg := "none" }}
+
+{{- if eq $path "" }}
+  {{- $emsg = "path to page was not specified" }}
+{{- else }}
+  {{- with .Site.GetPage $path -}}
+    <a href="{{ .Permalink }}{{ $hash }}">{{ $text | default .Title }}</a>
+  {{- else -}}
+    {{ $emsg = (printf "page path \"%s\" was not found" $path) }}
+  {{- end }}
+{{- end }}
+
+{{- if ne $emsg "none" }}
+  {{- errorf "pglink: %s" $emsg }}
+  {{- printf "<span style=\"background-color:#ff0; color:#000;\">[ERROR: pglink: %s]</span>"
+    $emsg | safeHTML }}
+{{- end }}
+
+{{- /**/ -}}

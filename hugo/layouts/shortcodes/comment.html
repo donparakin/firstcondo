@@ -1,0 +1,14 @@
+{{/*
+Shortcode: comment
+- Allow comments in Hugo content markdown files.
+- USAGE:  In Hugo content files (./content/../index.en.md):
+  {{< comment >}} ... {{< /comment >}}
+- Use "{{<" and not "{{%" so Hugo doesn't process the Inner content.
+*/}}
+{{- $junk := .Inner }}
+
+{{- /*
+Notes:
+- Hugo fails with an error if .Inner is not used in the shortcode.
+  But simply assigning .Inner to an unused variable works.
+*/ -}}
