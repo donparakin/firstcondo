@@ -1,0 +1,23 @@
+<!doctype html>
+
+<html lang="{{ .Language.Lang }}">
+ <head>
+{{- partial "html/head.html" . }}
+ </head>
+
+ <body
+{{- with .Page.Params.page_id }} id="{{.}}"{{ end }} class="fcg-2024">
+
+{{- block "header" . }}
+  {{- partial "html/body-header.html" . }}
+{{ end }}
+
+{{- block "main" . }}
+ <main id="pg-main">
+  <br><h1>Under Construction</h1>
+  <p>(from ./layouts/_default/baseof.html)</p>
+ </main>
+{{ end }}
+{{- partial "html/body-footer.html" }}
+ </body>
+</html>

@@ -1,0 +1,18 @@
+{{ define "main" }}
+{{- $has_byline := slice "resources" }}
+  <main>
+    <article>
+      <div class="content-grid ws-pg-title">
+        <h1 class="h2 breakout">{{ .Title | safeHTML }}</h1>
+      </div>
+      <div class="content-grid">
+        {{- if in $has_byline .Section }}
+        {{ partial "by-line" . }}
+        {{- else }}
+        <p>&nbsp;</p>
+        {{- end }}
+        {{ .Content }}
+      </div>
+    </article>
+  </main>
+{{ end }}

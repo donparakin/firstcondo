@@ -1,0 +1,8 @@
+name = "fcg-2024"
+license = "MIT"
+description = "FirstCondo.ca Theme, 2024 Style"
+min_version = "0.120.0"
+
+[author]
+  name = "Don Parakin"
+  homepage = "https://www.weaddvalue.ca"

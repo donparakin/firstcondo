@@ -1,0 +1,55 @@
+{{- /*------------------------------------------------------------------
+    Meta Tags
+--------------------------------------------------------------------*/}}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  {{- with .Params.redirect_url }}
+  <meta http-equiv="refresh" content="0; url={{ . }}">
+  {{- end }}
+  <title>
+  {{- with .Page.Title }}{{ .|safeHTML }}
+    {{- with $.Page.Params.subtitle }} - {{ .|safeHTML }}{{ end }}
+  {{- end -}}
+  </title>
+  {{- with .Params.author }}
+  <meta name="author" content="{{.}}">
+  {{- end }}
+  {{- $desc := trim (.Params.description | default .Summary | plainify) " \n" }}
+  {{ printf "<meta name=\"description\" content=%q>" $desc | safeHTML }}
+  <meta name="theme-color" content="{{ .Site.Params.theme_colour }}">
+  <meta name="color-scheme" content="light dark">
+  {{ hugo.Generator }}
+  <link rel="canonical" href="{{ .Page.Permalink }}">
+  {{- with .OutputFormats.Get "rss"}}{{/* FIX: it escapes the valid + in type; safeHTMLAttr not work */}}
+  {{ printf "<link rel=%q href=%q title=%q type=%q/>" .Rel .Permalink $.Site.Title .MediaType.Type | safeHTML }}
+  {{- end }}
+
+{{- /*------------------------------------------------------------------
+    CSS
+      - built/website.css is built just before Hugo runs by
+        build steps invoked by x-dev/netlify/deploy.bash
+--------------------------------------------------------------------*/}}
+  {{- with $.Page.Params.page_css }}
+  <style>{{ . | safeCSS }}</style>
+  {{- end }}
+
+  {{- $style := resources.Get "built/ws-site.css" | resources.Fingerprint }}
+  <link rel="stylesheet" id="ws-site-css" href="{{ $style.RelPermalink }}">
+
+{{- /*------------------------------------------------------------------
+    JavaScript
+      - js/website.js is built by Hugo's embedded esbuild.
+--------------------------------------------------------------------*/}}
+  {{- with .Params.i18n }}
+  <script>window.page_i18n = {{ jsonify . | safeJS }};</script>
+  {{- end}}
+  {{- $js_opts := (dict
+      "format" "iife"
+      "target" "es2017"
+      "minify" true
+      "targetPath" "built/ws-site.js"
+  ) }}
+  {{- $main_js := resources.Get "js/ws-site.js" | js.Build $js_opts | resources.Fingerprint }}
+  <script defer src="{{ $main_js.RelPermalink }}"></script>
+
+{{- /**/ -}}
