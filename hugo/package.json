@@ -12,8 +12,8 @@
     "hugo:serve+drafts": "hugo server --buildDrafts",
     "hugo:config": "hugo config",
     "hugo:version": "hugo version",
-    "sass:build": "node themes/ggc-2024/assets-src/css/build.cjs",
-    "sass:watch": "node themes/ggc-2024/assets-src/css/build.cjs --watch",
+    "sass:build": "node themes/fcg-2024/assets-src/css/build.cjs",
+    "sass:watch": "node themes/fcg-2024/assets-src/css/build.cjs --watch",
     "site:build": "npm run sass:build && npm run hugo:build"
   },
   "author": "Don Parakin",
@@ -22,7 +22,7 @@
     "hugo-extended": "*",
     "htmx.org": "2.x",
     "alpinejs": "3.x",
-    "@picocss/pico": "2.x",
+    "bootstrap": "5.x",
     "sass": "*"
   },
   "repository": {
