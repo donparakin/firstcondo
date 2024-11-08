@@ -4,8 +4,7 @@ date = "2007-12-01"
 description = "Condominium Reserve Fund Studies, Insurance Appraisals, and Performance Audits."
 +++
 
-# Insurance Appraisals
-
+{{< icon "building" >}}
 The requirement for _Insurance Appraisals_ is set out in the
 Condominium Act, 1998(5b), and in each Condominium Corporation's
 Declaration. The Declaration typically states the frequency of repeating
@@ -26,8 +25,9 @@ The final replacement cost estimate includes construction cost,
 demolition and disposal costs, material dumping fees, and applicable
 taxes.  There are no deductions for depreciation.
 
-# Insurance Appraisal Updates
+## Insurance Appraisal Updates {.breakout}
 
+{{< icon "building" >}}
 First Condo also provides annual update services to keep a comprehensive
 insurance appraisal current for more than one year. This is a cost
 effective way for corporations to ensure that they maintain adequate

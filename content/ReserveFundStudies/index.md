@@ -4,8 +4,7 @@ date = "2007-12-01"
 description = "Condominium Reserve Fund Studies, Insurance Appraisals, and Performance Audits."
 +++
 
-# Reserve Fund Studies
-
+{{< icon "building" >}}
 A _Reserve Fund Study_ is a financial document that provides the
 basis for the funding of major repairs and replacement of the common
 elements and assets of the corporation.
@@ -15,6 +14,7 @@ maintain at least one reserve fund. Minimum legal requirements are set
 out in Sections 93, 94, and 95 of Ontario's Condominium Act, 1998(5a),
 and clauses 27 to 33 of its Regulation 48/01.
 
+{{< icon "building" >}}
 First Condo's _Functional Reserve Fund Study_ exceeds legal
 requirements and provides condominiums with an effective and realistic
 plan for managing reserve funds.
@@ -24,8 +24,9 @@ the standard for the Real Estate Institute of Canada's professional
 designation of Certified Reserve Planner and is widely recognized as
 the most advanced reserve fund planning system in Canada.
 
-# Our Report
+## Our Report {.breakout}
 
+{{< icon "building" >}}
 First Condo's _Functional Reserve Fund Study_ is a clear
 step-by-step report that incorporates clear explanations, comprehensive
 physical and financial analyses, and valuable tools to assist clients
