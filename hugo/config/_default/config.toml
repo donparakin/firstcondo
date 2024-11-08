@@ -1,20 +1,20 @@
 #-----------------------------------------------------------------------
-# Site:  FirstCondo.ca
+# Hugo config for FirstCondo.ca
 #-----------------------------------------------------------------------
 baseURL = "https://www.firstcondo.ca/"
 title = "FirstCondo"
 
 theme = "fcg-2024"
-
-#---- See config/_default/module.toml for more settings
-#contentDir = "content"
-
+disablePathToLower = true  # Original website had mixed case URLs
 enableRobotsTXT = false
 #defaultContentLanguage = "en"
 #defaultContentLanguageInSubdir = true
 #enableMissingTranslationPlaceholders = false
 
-[taxonomies]
+[params]
+  theme_colour = "#387c2c"
+
+[taxonomies]  # Disable the default taxonomies
 tag = ""
 category = ""
 
