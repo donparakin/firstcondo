@@ -11,8 +11,13 @@ elements and assets of the corporation.
 
 Condominium corporations in Ontario are legally required to set up and
 maintain at least one reserve fund. Minimum legal requirements are set
-out in Sections 93, 94, and 95 of Ontario's Condominium Act, 1998(5a),
-and clauses 27 to 33 of its Regulation 48/01.
+out in Sections 
+[93](https://www.ontario.ca/laws/statute/98c19/#BK206),
+[94](https://www.ontario.ca/laws/statute/98c19/#BK207),
+and [95](https://www.ontario.ca/laws/statute/98c19/#BK208)
+of Ontario's [Condominium Act, 1998(5a)](https://www.ontario.ca/laws/statute/98c19/),
+and [clauses 27 to 33](https://www.ontario.ca/laws/regulation/010048#BK87)
+of Ontario's [Regulation 48/01](https://www.ontario.ca/laws/regulation/010048).
 
 {{< icon "building" >}}
 First Condo's _Functional Reserve Fund Study_ exceeds legal
